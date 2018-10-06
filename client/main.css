@@ -1,0 +1,223 @@
+/* Smartphones (portrait) ———– */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    background-color: rgba(223, 223, 223, 0.376);
+    color: #525252;
+}
+/* content container ------------------- */
+#content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+    max-width: 100%;
+    margin: 0 auto;
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "nav nav nav nav"
+    "footer footer footer footer";
+    
+}
+#content >*{
+    /* background: #4B88A2; */
+}
+/* header---------------------------- */
+header {
+    z-index: 100;
+    background-color: #ffffff;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(50px, auto);
+    width: 100%;
+    margin: 0 auto;
+    grid-gap: 10px;
+    color: #0da5f3;
+    text-shadow: 0 0 2px rgb(175, 210, 255);
+    box-shadow: 0 0 6px #525252;
+}
+header div{
+    align-self: center;
+}
+.logoSect {
+    padding: 5px;
+    font-size: 40px;
+}
+.linkBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(20px,auto);
+    font-size: 20px;
+}
+.linkBar p:hover {
+    border-bottom: 5px solid rgb(67, 204, 193);
+    margin-bottom: -5px;
+    transition: .3s;
+    text-shadow: 0px 0px 4px #FFF9FB;
+    cursor: pointer;
+}
+
+#search {
+    margin-bottom: 0px;
+    padding: 5px;
+    min-height: 10px;
+    
+}
+/*  main conten post ---------------------*/
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "task detail";
+    padding: 20px;
+    min-height: 500px; 
+    
+    grid-gap: 30px;
+}
+
+.detail, .task {
+    filter: drop-shadow(0 0 3px #bebebe);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.detail p {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.task {
+    grid-area: task;
+    padding: 20px;
+
+}
+
+.detail {
+    grid-area: detail;
+    padding: 20px;
+}
+
+.postCard {
+    border-left: 4px solid rgb(45, 219, 83);
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: justify;
+
+    filter: drop-shadow(0 0 2px #bebebe);
+    width: 90%;
+}
+.postCard h1{
+    font-size: 24px;
+}
+
+
+
+
+/* nav ---------------------------------- */
+nav {
+    grid-area: nav;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 10px #bebebe;
+    
+    color: #0da5f3;
+
+}
+
+.categories {
+    margin-top: 30px;
+    display: grid;
+    justify-items: start;
+    grid-gap: 15px;
+    font-size: 23px;    
+}
+
+.button {
+    border: 2px solid#D3D4D9;
+    height: 30px;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    padding-top: 10px;
+    border-radius: 30px;
+    transition: .3s;
+    font-size: 18px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(82, 199, 219);
+}
+
+textarea , input {
+    width: 90%;
+    min-height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+textarea {
+    height: 150px;
+}
+.addTask {
+    border: 2px solid#D3D4D9;
+    height: 30px;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    padding-top: 10px;
+    border-radius: 30px;
+    transition: .3s;
+    font-size: 18px;
+}
+.addTask:hover {
+    cursor: pointer;
+    background-color: rgb(82, 199, 219);
+}
+
+
+#newTaskForm {
+    display: none;
+}
+
+/* footer ----------------------------- */
+footer {
+    grid-area: footer;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px #525252;
+}
+
+
+
+
+/* dekstop responsive -------------------------- */
+@media screen and (min-width:1000px){
+    #content{
+        grid-template-areas: 
+        "header header header header"
+        "nav main main main"
+        "nav main main main"
+        "footer footer footer footer";
+    }
+    .linkBar {
+        grid-gap: 50px;
+        justify-self: end;
+        margin-right: 60px;
+        font-size: 30px;
+    }
+    main {
+        column-count: 3;
+    }
+    header {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
