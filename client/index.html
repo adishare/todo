@@ -14,12 +14,12 @@
 </head>
 <body>
     <div id="content">
-
+        
         <header>
             <div class="logoSect">ToDoooo</div>
             <div class="linkBar">
                 <p><input id="search" type="text" placeholder="Search"></p>
-                <p>Setting</p>
+                <p><input id="logout" type="button" value="logout" ></p>
                 
             </div>
         </header>
@@ -59,6 +59,7 @@
                 
 
             </div>
+
            
         </main>
         <footer>
@@ -66,6 +67,12 @@
         </footer>
 
     </div>
+
+    <form id="loginForm">
+        <input id="email" type="email" name="email" placeholder="Email" value="">
+        <input id="password" type="password" name="password" placeholder="Password" value="">
+        <div id="loginBtn" class="button" type="submit" > login </div>  
+    </form>
     
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="main.js"></script>

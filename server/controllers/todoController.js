@@ -115,11 +115,9 @@ class TodoController {
 	}
 
 	static updatebyId(req, res) {
-		// console.log(req.body);
-		// console.log(req.params);
 		let changes = {
 			title: req.body.title,
-			deadline: new Date(req.body.deadline) || undefined,
+			deadline: req.body.deadline|| undefined,
 			priority: req.body.priority,
 			notes: req.body.notes
 		};
